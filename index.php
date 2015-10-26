@@ -22,7 +22,7 @@
         <div class="row-centered">
             <div class="col-xs-12 col-md-4 col-centered"><h2><a class="btn btn-primary btn-lg" href="Volunteer/Login.php" role="button">Volunteer</a></h2></div> 
             <div class="col-xs-12 col-md-4 col-centered"><h2>Or...</h2></div> 
-            <div class="col-xs-12 col-md-4 col-centered"><h2><a class="btn btn-primary btn-lg" href="#" role="button">Administrator</a></h2></div> 
+            <div class="col-xs-12 col-md-4 col-centered"><h2><a class="btn btn-primary btn-lg" href="Administrator/LoginAdmin.php" role="button">Administrator</a></h2></div> 
         </div>
 	</div>
 	

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Volunteer Login - Meals On Wheels Dashboard</title>
+	<title>Administrator Login - Meals On Wheels Dashboard</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/bootstrap.min.css" rel="stylesheet"/>
@@ -11,7 +11,7 @@
 <body>
 	<!-- Start Header	-->
     <div class="header">
-        <h1> Volunteer Login </h1>
+        <h1> Administrator Login </h1>
     </div>
 	<!-- End Header		-->
     <div class="container">
@@ -19,15 +19,15 @@
             <div class="row-centered">
                 <div class="col-xs-12 col-md-6 col-centered">
                     <div class="form-group">
-                        <label for=volunteerUsername> <h2>Username</h2> </label>
-                        <input type="text" class="form-control" id="volunteerUsername" placeholder="Username">
+                        <label for=administratorUsername> <h2>Username</h2> </label>
+                        <input type="text" class="form-control" id="administratorUsername" placeholder="Username">
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-md-6 col-centered">
                     <div class="form-group">
-                        <label for=volunteerPassword> <h2>Password</h2> </label>
-                        <input type="password" class="form-control" id="volunteerPassword" placeholder="Password">
+                        <label for=administratorPassword> <h2>Password</h2> </label>
+                        <input type="password" class="form-control" id="administratorPassword" placeholder="Password">
                     </div>
                 </div>
             </div>
@@ -38,8 +38,8 @@
 	
         <hr>
         
-        <h2>Not a registered volunteer? <a href="#">Register here!</a></h2>
-	    <h2>Forgot your password? <a href="#">Click here!</a></h2>	
+        <h2>Forgot your password? <a href="#">Click here!</a></h2>
+	
         
         
         
