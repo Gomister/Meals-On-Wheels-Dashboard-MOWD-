@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Administrator Login - Meals On Wheels Dashboard</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../css/style.css" rel="stylesheet"  />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"  />
     <link rel="shortcut icon" href="images/Picture1.png">
 	
 </head>
@@ -40,6 +41,14 @@
         <hr>
         
         <h2>Forgot your password? <a href="#">Click here!</a></h2>
+        <div class="container">
+				<div class="col-md-4">
+					<a href="http://www.mealsonwheelsamerica.org/">
+						<img hspace="400" src="http://ecpalmbeach.com/wp-content/uploads/2013/03/Meals_On_Wheels_(West_Palm_Beach).JPG" 
+							width="300" height="200" alt="Meals-on-wheels" title="Meals-on-wheels">
+					</a>
+				</div>
+		</div>		
 	
         
         
@@ -52,3 +61,4 @@
     <script src="js/bootstrap.min.js"></script>	
 </body>
 </html>
+

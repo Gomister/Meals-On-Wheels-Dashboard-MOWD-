@@ -40,11 +40,24 @@ h2 {
 	color: #000;
 }
 
+hr {
+    border-color: black;
+    background-color: black;
+
+}
+
+label {
+    color:#000;
+}
 .leftHalf {
 	float: left;
 	background-color: #26343f;
 	width: 45%;
 	height: 100%;
+}
+
+.rightHalf{
+    float:right;
 }
 
 .header {
