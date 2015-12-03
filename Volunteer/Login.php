@@ -23,7 +23,7 @@ if(isset($_POST['login'])){
 
 
 echo "
-	<title>Volunteer Login - Meals On Wheels Dashboard</title>
+	<title>Meals On Wheels Dashboard</title>
     </head>
     <body>
 	<!-- Start Header	-->

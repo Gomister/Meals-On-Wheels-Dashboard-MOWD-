@@ -1,64 +1,70 @@
+<?php
+include_once '../startEverything.php';
+if(isset($_POST['login'])){
+    $email = $_POST['volunteerEmail'];
+    $password = $_POST['volunteerPassword'];
+    $salt1 = "h@5u*";
+    $salt2 = "%!rep";
+    $hashedPassword = hash('ripemd128',"$salt1$password$salt2");
+    $resultSQL = $mysqli->query("SELECT id, name FROM volunteers WHERE email='$email' AND password='$hashedPassword'");
+    $result = $resultSQL->fetch_array();
+    if(count($result) >=1){
+        $_SESSION['userID'] = $result['id'];
+        $_SESSION['userName'] = $result['name'];
+        $result->free();
+        $errorMessage->free();
+        echo "<script type='text/javascript'>window.location='MainMenu.php';</script>";
+        
+    }
+    else{
+        $errorMessage = "Incorrect Login!";
+    }
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Administrator Login - Meals On Wheels Dashboard</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"  />
-    <link rel="shortcut icon" href="images/Picture1.png">
-	
-</head>
-<body>
+
+echo "
+	<title>Meals On Wheels Dashboard</title>
+    </head>
+    <body>
 	<!-- Start Header	-->
-    <div class="header">
-        <h1> Administrator Login </h1>
+        <div class='header'>
+        <h1> Volunteer Login </h1>
     </div>
 	<!-- End Header		-->
-    <div class="container">
-        <form>
-            <div class="row-centered">
-                <div class="col-xs-12 col-md-6 col-centered">
-                    <div class="form-group">
-                        <label for=administratorUsername> <h2>Username</h2> </label>
-                        <input type="text" class="form-control" id="administratorUsername" placeholder="Username">
+    <div class='container'>
+        <form method='post'>
+            <div class='row-centered'>
+                <div class='col-xs-12 col-md-6 col-centered'>
+                    <div class='form-group'>
+                        <label for=volunteerEmail> <h2>E-mail</h2> </label>
+                        <input type='text' class='form-control' id='volunteerEmail' name='volunteerEmail' placeholder='E-Mail' required>
                     </div>
                 </div>
-
-                <div class="col-xs-12 col-md-6 col-centered">
-                    <div class="form-group">
-                        <label for=administratorPassword> <h2>Password</h2> </label>
-                        <input type="password" class="form-control" id="administratorPassword" placeholder="Password">
-                    </div>
+         <div class='col-xs-12 col-md-6 col-centered'>
+                <div class='form-group'>
+                        <label for=volunteerPassword> <h2>Password</h2> </label>
+                    <input type='password' class='form-control' id='volunteerPassword' name='volunteerPassword' placeholder='********' required>
                 </div>
-            </div>
-            <div class="row-centered">
-                <button type="submit" class="btn btn-primary btn-lg row-centered btn-block">Submit</button>
+        </div>
+    </div>
+      <div class='row-centered'>
+                <button type='submit' class='btn btn-primary btn-lg row-centered btn-block' id ='login' name='login'>Submit</button>
             </div>
         </form>
-	
+        <h2 class='error-message'>$errorMessage</h2>
         <hr>
-        
-        <h2>Forgot your password? <a href="#">Click here!</a></h2>
-        <div class="container">
-				<div class="col-md-4">
-					<a href="http://www.mealsonwheelsamerica.org/">
-						<img hspace="400" src="http://ecpalmbeach.com/wp-content/uploads/2013/03/Meals_On_Wheels_(West_Palm_Beach).JPG" 
-							width="300" height="200" alt="Meals-on-wheels" title="Meals-on-wheels">
-					</a>
-				</div>
-		</div>		
+          <h2>Not a registered volunteer? <a href='SignUp.php'>Register here!</a></h2>
 	
         
         
         
     </div>
     <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+     <script src='js/jquery.js'></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>	
+      <script src='js/bootstrap.min.js'></script>	
 </body>
-</html>
-
+</html>";
+?>
+        
