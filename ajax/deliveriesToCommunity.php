@@ -8,7 +8,7 @@
                     FROM ( 	SELECT c.* 
 		                    FROM clients c
                     WHERE 
-                        CASE dayname(curdate())
+                        CASE dayname(CURDATE())
 				            WHEN 'Monday' THEN c.monday!=0
                             WHEN 'Tuesday' THEN c.tuesday!=0
                             WHEN 'Wednesday' THEN c.wednesday!=0
@@ -20,9 +20,9 @@
 		            AND c.community='". $mysqli->real_escape_string($_POST['communityName']) ."' ) deliveriesToBeMadeToday
                     WHERE deliveriesToBeMadeToday.clientID NOT IN ( SELECT d.clientID 
 												                    FROM delivery d
-												                    WHERE d.deliveryDate = curdate() )";
+												                    WHERE d.deliveryDate = CURDATE() )";
         $clientsResult=$mysqli->query($getDeliveriesToBeMadeQuery);
-        if($clientsResult->num_rows > 0){
+        if( $clientsResult->num_rows > 0){
             $clientData = "";
             while( $clientRow = $clientsResult->fetch_object() ){
                 $clientData .= "<hr>
@@ -58,6 +58,15 @@
             }
             
             echo $clientData;
+        }
+        else{
+            $noClientData ="";
+            $noClientData =   "
+                                <div class='row'>
+                                    <h3 class='text-black'>There are no more clients who need deliveries in this community today!</h3>
+                                </div>
+                            ";
+            echo $noClientData;
         }
     }
     else echo "isset never entered";

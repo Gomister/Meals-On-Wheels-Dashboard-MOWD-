@@ -30,10 +30,6 @@ if(isset($_POST['signup'])){
     
     
     if( $mysqli->query("INSERT INTO volunteers VALUES(NULL,'$email','$hashedPassword','$name','$birthday','$phonenumber','$emergencyphonenumber','$monday','$tuesday','$wednesday','$thursday','$friday','$saturday','$sunday')") === TRUE){
-            echo "User was added";
-    }
-    else{
-            echo $mysqli->error;
             //echo "User was added";
             echo "<script type='text/javascript'>window.location='Login.php';</script>";
     }

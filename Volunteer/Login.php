@@ -8,26 +8,27 @@ if(isset($_POST['login'])){
     $hashedPassword = hash('ripemd128',"$salt1$password$salt2");
     $resultSQL = $mysqli->query("SELECT id, name FROM volunteers WHERE email='$email' AND password='$hashedPassword'");
     $result = $resultSQL->fetch_array();
-    if(count($result) >=1){
+   	if(count($result) >=1){
         $_SESSION['userID'] = $result['id'];
         $_SESSION['userName'] = $result['name'];
-        $result->free();
-        $errorMessage->free();
+        $result='';
+        $errorMessage='';
         echo "<script type='text/javascript'>window.location='MainMenu.php';</script>";
         
     }
     else{
-        $errorMessage = "Incorrect Login!";
+        $errorMessage = "Invalid Login!";
     }
 }
 
 
 echo "
-	<title>Meals On Wheels Dashboard</title>
-    </head>
-    <body>
+	<link href='../css/style-volunteer.css' rel='stylesheet'  />
+	<title>Volunteer Login - Meals On Wheels Dashboard</title>
+</head>
+<body>
 	<!-- Start Header	-->
-        <div class='header'>
+    <div class='header'>
         <h1> Volunteer Login </h1>
     </div>
 	<!-- End Header		-->
@@ -40,31 +41,28 @@ echo "
                         <input type='text' class='form-control' id='volunteerEmail' name='volunteerEmail' placeholder='E-Mail' required>
                     </div>
                 </div>
-         <div class='col-xs-12 col-md-6 col-centered'>
-                <div class='form-group'>
+
+                <div class='col-xs-12 col-md-6 col-centered'>
+                    <div class='form-group'>
                         <label for=volunteerPassword> <h2>Password</h2> </label>
-                    <input type='password' class='form-control' id='volunteerPassword' name='volunteerPassword' placeholder='********' required>
+                        <input type='password' class='form-control' id='volunteerPassword' name='volunteerPassword' placeholder='********' required>
+                    </div>
                 </div>
-        </div>
-    </div>
-      <div class='row-centered'>
-                <button type='submit' class='btn btn-primary btn-lg row-centered btn-block' id ='login' name='login'>Submit</button>
+            </div>
+            <div class='row-centered'>
+                <button type='submit' class='btn btn-primary btn-lg row-centered btn-block' id ='login' name='login'>Login</button>
             </div>
         </form>
-        <h2 class='error-message'>$errorMessage</h2>
-        <hr>
-          <h2>Not a registered volunteer? <a href='SignUp.php'>Register here!</a></h2>
-	
-        
+	       <h2 class='error-message'>$errorMessage</h2>
+        <hr>  
         
         
     </div>
     <!-- jQuery Version 1.11.1 -->
-     <script src='js/jquery.js'></script>
+    <script src='js/jquery.js'></script>
 
     <!-- Bootstrap Core JavaScript -->
-      <script src='js/bootstrap.min.js'></script>	
+    <script src='js/bootstrap.min.js'></script>	
 </body>
 </html>";
 ?>
-        

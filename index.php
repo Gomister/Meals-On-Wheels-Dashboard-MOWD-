@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"  />
-    <link rel="shortcut icon" href="images/Picture1.png">
-
 	
 </head>
 <body>
@@ -24,7 +22,7 @@
         <div class="row-centered">
             <div class="col-xs-12 col-md-4 col-centered"><h2><a class="btn btn-primary btn-lg" href="Volunteer/Login.php" role="button">Volunteer</a></h2></div> 
             <div class="col-xs-12 col-md-4 col-centered"><h2>Or...</h2></div> 
-            <div class="col-xs-12 col-md-4 col-centered"><h2><a class="btn btn-primary btn-lg" href="Administrator/LoginAdmin.php" role="button">Administrator</a></h2></div> 
+            <div class="col-xs-12 col-md-4 col-centered"><h2><a class="btn btn-primary btn-lg" href="Administrator/Login.php" role="button">Administrator</a></h2></div> 
         </div>
 	</div>
 	
