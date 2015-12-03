@@ -1,8 +1,8 @@
 <?php
 include_once '../startEverything.php';
 if(isset($_POST['login'])){
-    $email = $_POST['volunteerEmail'];
-    $password = $_POST['volunteerPassword'];
+    $email = $_POST['adminEmail'];
+    $password = $_POST['adminPassword'];
     $salt1 = "h@5u*";
     $salt2 = "%!rep";
     $hashedPassword = hash('ripemd128',"$salt1$password$salt2");
@@ -28,7 +28,7 @@ echo "
     <body>
 	<!-- Start Header	-->
         <div class='header'>
-        <h1> Volunteer Login </h1>
+        <h1> Administrator Login </h1>
     </div>
 	<!-- End Header		-->
     <div class='container'>
@@ -36,14 +36,14 @@ echo "
             <div class='row-centered'>
                 <div class='col-xs-12 col-md-6 col-centered'>
                     <div class='form-group'>
-                        <label for=volunteerEmail> <h2>E-mail</h2> </label>
-                        <input type='text' class='form-control' id='volunteerEmail' name='volunteerEmail' placeholder='E-Mail' required>
+                        <label for=adminEmail> <h2>E-mail</h2> </label>
+                        <input type='text' class='form-control' id='adminEmail' name='adminEmail' placeholder='E-Mail' required>
                     </div>
                 </div>
          <div class='col-xs-12 col-md-6 col-centered'>
                 <div class='form-group'>
-                        <label for=volunteerPassword> <h2>Password</h2> </label>
-                    <input type='password' class='form-control' id='volunteerPassword' name='volunteerPassword' placeholder='********' required>
+                        <label for=adminPassword> <h2>Password</h2> </label>
+                    <input type='password' class='form-control' id='adminPassword' name='adminPassword' placeholder='********' required>
                 </div>
         </div>
     </div>
@@ -52,11 +52,7 @@ echo "
             </div>
         </form>
         <h2 class='error-message'>$errorMessage</h2>
-        <hr>
-          <h2>Not a registered volunteer? <a href='SignUp.php'>Register here!</a></h2>
-	
-        
-        
+        <hr>        
         
     </div>
     <!-- jQuery Version 1.11.1 -->
