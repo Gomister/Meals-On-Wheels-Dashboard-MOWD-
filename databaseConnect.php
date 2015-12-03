@@ -55,12 +55,4 @@ if ($mysqli->connect_errno) {
 //			$mysql_username . ", " . 
 //			$mysql_password . ", " . 
 //			$mysql_server_name . ").";
-			
-$queryString = "CREATE TABLE IF NOT EXISTS Person(name VARCHAR(20), age INT)";
-$mysqli->query($queryString);
-
-$mysqli->query ("CREATE TABLE IF NOT EXISTS Animal(name VARCHAR(20), species VARCHAR(20))");
-
-$mysqli->query ("CREATE TABLE IF NOT EXISTS Client(name VARCHAR(20), address VARCHAR(40), age INT)");
-
 ?>
