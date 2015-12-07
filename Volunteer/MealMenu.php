@@ -16,7 +16,7 @@
             <div class="col-xs-12 col-md-2 "><h1><a class="btn btn-primary btn-lg" href="Logout.php" role="button">Log Out</a></h1></div>
     </div>
 	<!-- End Header		-->
-    <h2>Today is *date*, check the calender below for today's meal!</h2>
+    <h2>Check the calender below for today's meal!</h2>
     <object  class="center-block" data="../content/MENU-update.pdf" type="application/pdf" width="75%%" height="100%">
         <p>It appears you don't have a PDF plugin for this browser. That's fine! You can <a href="../content/MENU-update.pdf">click here to download the PDF file.</a></p>
     </object>

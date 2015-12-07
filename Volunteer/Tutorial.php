@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_OBlgSz8sSM" allowfullscreen>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8sWb1Pqt28c" allowfullscreen>
                 </iframe>
             </div>
         </div>
