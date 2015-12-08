@@ -1,7 +1,7 @@
 <?php
 //START SESSIONING AND DATABASE CONNECTION
     session_start();
-    include_once '../databaseConnect.php';  
+    include_once 'databaseConnect.php';  
     if (isset($_SESSION['administratorID']))
     {
         $administratorID = $_SESSION['userID'];
@@ -19,15 +19,15 @@
     
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Edit Volunteers - Meals On Wheels Dashboard</title>
 	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='js/jquery-ui/jquery-ui.min.css' rel='stylesheet' type='text/css' />
     <link href='js/jtable/themes/metro/purple/jtable.min.css' rel='stylesheet' type='text/css' />
-    <link href='../css/bootstrap.min.css' rel='stylesheet'/>
-    <link href='../css/style-admin.css' rel='stylesheet'  />
+    <link href='css/bootstrap.min.css' rel='stylesheet'/>
+    <link href='css/style-admin.css' rel='stylesheet'  />
     
     <script src='js/jquery.js' type='text/javascript'></script>
     <script src='js/jquery-ui/jquery-ui.min.js' type='text/javascript'></script>

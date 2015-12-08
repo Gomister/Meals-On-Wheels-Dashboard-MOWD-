@@ -1,7 +1,7 @@
 <?php
 //START SESSIONING AND DATABASE CONNECTION
     session_start();
-    include_once '../databaseConnect.php';  
+    include_once 'databaseConnect.php';  
     if (isset($_SESSION['administratorID']))
     {
         $administratorID = $_SESSION['administratorID'];
@@ -34,14 +34,14 @@ if(isset($_POST['login'])){
     }
 }
 
-echo "
+echo"
 <!DOCTYPE html>
-<html>
+<html lang='en'>
     <title>Administrator Login - Meals On Wheels Dashboard</title>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href='../css/bootstrap.min.css' rel='stylesheet'/>
-    <link href='../css/style-admin.css' rel='stylesheet'  />
+    <link href='css/bootstrap.min.css' rel='stylesheet'/>
+    <link href='css/style-admin.css' rel='stylesheet'  />
 </head>
 <body>
 	<!-- Start Header	-->
@@ -76,11 +76,10 @@ echo "
         
     </div>
     <!-- jQuery Version 1.11.1 -->
-    <script src='../js/jquery.js'></script>
+    <script src='js/jquery.js'></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src='../js/jquery.js'></script>	
+    <script src='js/jquery.js'></script>	
 </body>
-</html>
-";
+</html>";
 ?>

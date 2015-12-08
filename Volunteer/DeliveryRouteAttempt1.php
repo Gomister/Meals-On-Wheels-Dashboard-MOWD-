@@ -1,5 +1,5 @@
 <?php
-    require_once '../startEverything.php';
+    require_once 'startEverything.php';
     $communitySelectOptions = $numberOfCommunities ="";
     $communityResult=$mysqli->query("SELECT community FROM clients GROUP BY community");
     if( $communityResult->num_rows > 0 )

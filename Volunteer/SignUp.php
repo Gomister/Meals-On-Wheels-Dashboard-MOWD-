@@ -1,5 +1,5 @@
 <?php
-include_once '../startEverything.php';
+include_once 'startEverything.php';
 
 if(isset($_POST['signup'])){
     $email = $_POST['email'];

@@ -2,7 +2,7 @@
     session_start();
     echo "
         <!DOCTYPE html>
-        <html>
+        <html lang='en'>
         <head>";
     include_once 'databaseConnect.php';
     

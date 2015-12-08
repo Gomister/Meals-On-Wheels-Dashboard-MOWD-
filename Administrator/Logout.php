@@ -1,7 +1,7 @@
 <?php
 //START SESSIONING AND DATABASE CONNECTION
     session_start();
-    include_once '../databaseConnect.php';  
+    include_once 'databaseConnect.php';  
     if (isset($_SESSION['administratorID']))
     {
         $administratorID = $_SESSION['administratorID'];
@@ -15,12 +15,12 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <title>Administrator Logout - Meals On Wheels Dashboard</title>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href='../css/bootstrap.min.css' rel='stylesheet'/>
-    <link href='../css/style-admin.css' rel='stylesheet'  />
+    <link href='css/bootstrap.min.css' rel='stylesheet'/>
+    <link href='css/style-admin.css' rel='stylesheet'  />
 </head>
 <body>
 	<!-- Start Header	-->

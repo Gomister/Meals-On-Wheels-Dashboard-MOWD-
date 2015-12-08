@@ -1,5 +1,5 @@
 <?php 
-require '../../databaseConnect.php';
+require 'databaseConnect.php';
 
 $updateAdministrator= 
     "

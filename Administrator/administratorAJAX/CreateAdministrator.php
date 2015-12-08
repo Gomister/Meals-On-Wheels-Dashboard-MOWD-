@@ -1,5 +1,5 @@
 <?php 
-require '../../databaseConnect.php';
+require 'databaseConnect.php';
 $password = $_POST['administratorPassword'];
 $salt1 = "h@5u*";
 $salt2 = "%!rep";

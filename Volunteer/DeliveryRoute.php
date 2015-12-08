@@ -1,5 +1,5 @@
 <?php
-    require_once '../startEverything.php';
+    require_once 'startEverything.php';
     $communitySelectOptions = $numberOfCommunities ="";
     $communityResult=$mysqli->query("SELECT community FROM clients GROUP BY community");
     if( $communityResult->num_rows > 0 )
@@ -12,7 +12,7 @@
 
     if($loggedIn){
     echo"       
-    			<link href='../css/style-volunteer.css' rel='stylesheet'  />
+    			<link href='css/style-volunteer.css' rel='stylesheet'/>
     			<title>Delivery Dashboard - Meals On Wheels Dashboard</title>
             </head>
             <body>            
