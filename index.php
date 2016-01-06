@@ -4,8 +4,8 @@
 	<title>Meals On Wheels Dashboard</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"  />
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css" rel="stylesheet"  />
 	
 </head>
 <body>
@@ -25,8 +25,10 @@
             <div class="col-xs-12 col-md-4 col-centered"><h2><a class="btn btn-primary btn-lg" href="Administrator/Login.php" role="button">Administrator</a></h2></div> 
         </div>
 	</div>
-	
-	
+    
+    <br><hr><br>
+    <a href="http://www.mealsonwheelsamerica.org/"><img src="http://ecpalmbeach.com/wp-content/uploads/2013/03/Meals_On_Wheels_(West_Palm_Beach).JPG" height="100" width="200" hspace="580" alt="Home"></a>
+
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
 

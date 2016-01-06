@@ -1,5 +1,5 @@
 <?php
-include_once 'startEverything.php';
+include_once '../startEverything.php';
 if(isset($_POST['login'])){
     $email = $_POST['volunteerEmail'];
     $password = $_POST['volunteerPassword'];

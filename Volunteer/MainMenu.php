@@ -1,7 +1,7 @@
 <?php
-    require_once 'startEverything.php';
+    require_once '../startEverything.php';
     echo"       
-    			<link href='css/style-volunteer.css' rel='stylesheet'  />
+    			<link href='../css/style-volunteer.css' rel='stylesheet'  />
     			<title>Volunteer Main Menu - Meals On Wheels Dashboard</title>
             </head>
             <body>

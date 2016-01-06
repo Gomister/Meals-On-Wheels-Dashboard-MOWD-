@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['communityName'])){
-        require 'databaseConnect.php';
+        require '../databaseConnect.php';
         //$communityName = $mysqli->real_escape_string($_POST['communityName']);
         //echo $_POST['communityName'];
         $getDeliveriesToBeMadeQuery = 

@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['clientAddress'])){
-        require 'databaseConnect.php';
+        require '../databaseConnect.php';
         $currentClientAddress = $mysqli->real_escape_string($_POST['clientAddress']);
         $volunteerID = $mysqli->real_escape_string($_POST['userID']);
         $selectClientIDFromAddressQuery=
