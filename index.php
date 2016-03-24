@@ -27,7 +27,7 @@
 	</div>
     
     <br><hr><br>
-    <a href="http://www.mealsonwheelsamerica.org/"><img src="http://ecpalmbeach.com/wp-content/uploads/2013/03/Meals_On_Wheels_(West_Palm_Beach).JPG" height="100" width="200" hspace="580" alt="Home"></a>
+    <a href="http://www.mealsonwheelsamerica.org/"><img src="http://ecpalmbeach.com/wp-content/uploads/2013/03/Meals_On_Wheels_(West_Palm_Beach).JPG" height="100" width="200" hspace="400" alt="Home"></a>
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
